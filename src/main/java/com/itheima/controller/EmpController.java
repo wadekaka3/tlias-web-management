@@ -31,7 +31,7 @@ public class EmpController {
                        String name, Short gender,
                        @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate begin,
                        @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate end){
-        log.info("分页查询, 参数: (), (), (), (), (), ()", page, pageSize, name, gender, begin, end);
+        log.info("分页查询, 参数: {}, {}, {}, {}, {}, {}", page, pageSize, name, gender, begin, end);
         // 调用service分页查询
         PageBean pageBean = empService.page(page, pageSize, name, gender, begin, end);
         return Result.success(pageBean);
