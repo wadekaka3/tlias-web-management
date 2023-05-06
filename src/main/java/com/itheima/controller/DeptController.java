@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.itheima.anno.Log;
 import com.itheima.pojo.Dept;
 import com.itheima.pojo.Result;
 import com.itheima.service.DeptService;
@@ -51,6 +52,7 @@ public class DeptController {
      * @Return
      */
 //    @DeleteMapping("/depts/{id}")
+    @Log
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) throws Exception {
         log.info("根据id删除部门：{}", id);
@@ -64,6 +66,7 @@ public class DeptController {
      * @return
      */
 //    @PostMapping("/depts")
+    @Log
     @PostMapping
     public Result add(@RequestBody Dept dept) { // @RequestBody 可以将json格式的消息封装到实体类中
         log.info("新增部门:{}", dept);
@@ -77,6 +80,7 @@ public class DeptController {
      * @param dept
      * @return
      */
+    @Log
     @PutMapping
     public Result update(@RequestBody Dept dept) {
         log.info("修改部门:{}", dept);
