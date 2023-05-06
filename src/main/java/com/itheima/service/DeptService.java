@@ -20,7 +20,7 @@ public interface DeptService {
      * @param id
      */
 
-    void delete(Integer id);
+    void delete(Integer id) throws Exception;
 
     /**
      * 新增部门
